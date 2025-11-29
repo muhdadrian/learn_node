@@ -1,0 +1,41 @@
+<div class="comntainer mt-3">
+	<div class="row">
+		<div class="col-md-6">
+			<!-- 1st change from add to edit -->
+			<h2>Edit Data Contact Form</h2>
+				<% if (typeof errors != 'undefined') { %>
+					 <div class="alert alert-danger" role="alert">
+						<ul>
+							<% errors.forEach(error => { %>
+								<li>
+									<%= error.msg  %>
+								</li>
+							<% }) %>
+						</ul>
+					 </div>
+				<% } %>
+
+				<!-- for info -- edit is a route to display the form, while update is a route for changing data process -->
+
+				<!-- 2nd add update in action (/contact/update) -->
+			 <form method="post" action="/contact/update">
+				<div class="mb-3">
+					<!-- 4th, add value in the end of each input to show the name, email and phoneno in the placeholder to be edited. Before this 4th, you can try to click the edit button in the browser. They will show empty placeholder  -->
+					<label for="name" class="form-label">Name</label>
+					<input type="text" class="form-control" id="name" name="name" required value="<%= contact.name %>">
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" name="email" required value="<%= contact.email %>">
+				</div>
+				<div class="mb-3">
+					<label for="phoneno" class="form-label">Phone No</label>
+					<input type="text" class="form-control" id="phoneno" name="phoneno" required value="<%= contact.phoneno %>">
+					<!-- 5th, try to refresh the browser and click the edit button. The details to be edited is being displayed. Try some other names and click the edit button. Further, go to 153 -->
+				</div>
+				<!-- 3rd, replace the button from add to edit -->
+				<button type="submit" class="btn btn-primary">Edit Contact Data</button>
+			</form>
+		</div>
+	</div>
+ </div>

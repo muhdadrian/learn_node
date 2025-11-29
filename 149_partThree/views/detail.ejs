@@ -1,0 +1,25 @@
+<div class="container mt-3">
+	<div class="row">
+		<div class="col-md-8">
+			<h2>Detail Contact</h2>
+			 <% if (!contact) { %>
+				<div class="alert alert-danger fw-bold" role="alert">
+					There's no contact data! <br> <a href="/contact" class="alert-link fw-normal">&laquo;Return to Contact Registration</a>. 
+				</div>
+			 <% } else { %>
+			<div class="card" style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title"><%= contact.name %></h5>
+					<h6 class="card-subtitle mb-2 text-body-secondary"><%= contact.phoneno %></h6>
+					<p class="card-text"><%= contact.email  %></p>
+					<!-- 1st we add delete. It will go to new route: contact/delete and the contact name to be deleted. -->
+					 <a href="/contact/delete/<%= contact.name %>" class="btn btn-danger badge" onclick="return confirm('Are you sure?');">Delete</a>
+					 <!-- 2nd go to contact page and click the detail button. The red delete button is already there. And we display it in block, add d-block and mt-3 at below -->
+					<a href="/contact" class="card-link d-block mt-3">&laquo;Return to Contact Registration</a>
+					<!-- 3rd we make delete confirmation by adding JS, on the delete button above (onclick). Refresh the page and click the button. If we click ok button, there will be request to the delete url. If we click cancel, nothing happened. Now go back to app.js -->
+				</div>
+			</div>
+			<% } %>
+		</div>
+	</div>
+</div>

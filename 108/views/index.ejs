@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h3>Links</h3>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+    <h1>Web Server NodeJS</h1>
+    <h2>Hello, <%= name %></h2>
+
+    <h4>Students Registration</h4>
+    <% students.forEach(student => { %>
+    <ul>
+      <!-- 1st, we replace below with 2nd -->
+      <!-- <li>Name : Adrian Nandu</li>
+      <li>Email : adriannandu@gmail.com</li> -->
+
+      <!-- 2nd, we get the name and email from the array in app.js -->
+      <li>Name : <%= student.name %></li>
+      <li>Email : <%= student.email %></li>
+    </ul>
+    <% }) %>
+    <!-- 3rd, besides for and foreach, we can also add if for the control flow. Go to 109 -->
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h3>Links</h3>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+    <h1>Web Server NodeJS</h1>
+    <h2>Hello, <%= name %></h2>
+
+    <h4>Students Registration</h4>
+    <!-- 1st, we check if the array or data is empty (ejsif). Replace the condition with students.length. If the length < 1 (means 0 or no data) -->
+    <% if (students.length < 1) { %>
+    <p>Students data is empty</p>
+    <% } %>
+    <!-- 2nd, run the app -->
+    <!-- 3rd the forEach code below is still being executed even the array is empty. If you do not want to run the code below, add else 110 -->
+    <% students.forEach(student => { %>
+    <ul>
+      <li>Name : <%= student.name %></li>
+      <li>Email : <%= student.email %></li>
+    </ul>
+    <% }) %>
+  </body>
+</html>

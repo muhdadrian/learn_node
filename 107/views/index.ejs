@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h3>Links</h3>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+    <h1>Web Server NodeJS</h1>
+    <h2>Hello, <%= name %></h2>
+
+    <h4>Students Registration</h4>
+    <!-- 1st, do looping (shortcut ejseach). Replace array with students. Replace element with student -->
+    <% students.forEach(student => { %>
+    <ul>
+      <li>Name : Adrian Nandu</li>
+      <li>Email : adriannandu@gmail.com</li>
+    </ul>
+    <% }) %>
+    <!-- 2nd, remove the ul below to above -->
+    <!-- <ul>
+      <li>Name : Adrian Nandu</li>
+      <li>Email : adriannandu@gmail.com</li>
+    </ul> -->
+    <!-- 3rd, if we run the app, the ul above will be printed thrice according to the total element in the array -->
+    <!-- 4th, we need to take from the array in 108 -->
+  </body>
+</html>

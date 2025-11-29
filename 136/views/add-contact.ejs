@@ -1,0 +1,30 @@
+<div class="comntainer mt-3">
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Add Data Contact Form</h2>
+			<!-- 1st, we add post method in form below. It will be handled by its action with contact route. Go app.js for a while -->
+			 <form method="post" action="/contact">
+				<div class="mb-3">
+					<!-- 2nd, replace the exampleInputEmail1 in for (label) and id (input) with name  -->
+					<label for="name" class="form-label">Name</label>
+					<!-- 3rd, replace the type from email to text and we delete the aria-describedby first. We add name="name". The name is input attribute, while the name after = is the name from contact. We add validation (required), it's compulsory to be filled  -->
+					<input type="text" class="form-control" id="name" name="name" required>
+					<!-- 4th, comment the div below: -->
+					<!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+				</div>
+				<!-- 5th, comment the password: -->
+				<!-- <div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<input type="password" class="form-control" id="exampleInputPassword1">
+				</div> -->
+				<!-- 6th, comment the check: -->
+				<!-- <div class="mb-3 form-check">
+					<input type="checkbox" class="form-check-input" id="exampleCheck1">
+					<label class="form-check-label" for="exampleCheck1">Check me out</label>
+				</div> -->
+				<!-- 7th, go to 137 -->
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+ </div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeJS Web Server</title>
+  </head>
+  <body>
+    <h3>Links</h3>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+    <!-- 2nd, we use tag express below and write JS syntax within the tag -->
+    <% const name = 'Adrian Nandu'; %>
+    <h1>Web Server NodeJS</h1>
+    <!-- 1st, we create the h2 below  -->
+    <!-- <h2>Hello, Adrian Nandu</h2> -->
+
+    <!-- 3rd we commented the 1st above and replaced at below. It will capture from the name var above -->
+    <h2>Hello, <%= name %></h2>
+    <!-- 4th, install an extension ejs language support (to handle ejs script) as VSC does not automatically read the syntax containg name var above  -->
+    <!-- 5th, to write ejs can simply write % or ejs for shortcut -->
+    <!-- 6th, go to 104 -->
+  </body>
+</html>

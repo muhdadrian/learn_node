@@ -1,0 +1,16 @@
+{
+  "name": "37",
+  "version": "1.0.0",
+  "description": "Learn NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "ls",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian Nandu",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^13.12.0"
+  }
+}

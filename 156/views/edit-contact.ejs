@@ -1,0 +1,39 @@
+<div class="comntainer mt-3">
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Edit Data Contact Form</h2>
+				<% if (typeof errors != 'undefined') { %>
+					 <div class="alert alert-danger" role="alert">
+						<ul>
+							<% errors.forEach(error => { %>
+								<li>
+									<%= error.msg  %>
+								</li>
+							<% }) %>
+						</ul>
+					 </div>
+				<% } %>
+
+			 <form method="post" action="/contact/update">
+				<!-- 1st, we adjust the value below in input below by using ternary. In the contact object, is there any oldName, if yes, the value is oldName. If no, the value is name. -->
+				 <input type="hidden" name="oldName" value="<%= (contact.oldName) ? contact.oldName : contact.name %>">
+				 <!-- 2nd, try to click the Edit Contact Data button after changing Adrian James Nandu to Hafizah Hamran. The name is already registered (failed). Now try to click for the second time, it will not pass the data like in 155.  -->
+					<!-- if you want simpler by using or instead of ternary go to 157 -->
+				
+				 <div class="mb-3">
+					<label for="name" class="form-label">Name</label>
+					<input type="text" class="form-control" id="name" name="name" required value="<%= contact.name %>">
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" name="email" required value="<%= contact.email %>">
+				</div>
+				<div class="mb-3">
+					<label for="phoneno" class="form-label">Phone No</label>
+					<input type="text" class="form-control" id="phoneno" name="phoneno" required value="<%= contact.phoneno %>">
+				</div>
+				<button type="submit" class="btn btn-primary">Edit Contact Data</button>
+			</form>
+		</div>
+	</div>
+ </div>

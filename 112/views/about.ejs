@@ -1,0 +1,11 @@
+<!-- all the ejs syntax below will call header, nav and footer -->
+<%- include('layouts/header')  %>
+<%- include('layouts/nav')  %>
+
+<h1>This is About Page!</h1>
+
+<%- include('layouts/footer') %>
+<!-- now try to run the app (nodemon app) -->
+ <!-- if we view page source the about page, it will show that the syntax above are fetching from the header, nav and footer -->
+  <!-- try to replace the - to = for header above. It print the tag. If we view page source it, it will show html escape char -->
+   <!-- we do the same for the contact page in 113 -->

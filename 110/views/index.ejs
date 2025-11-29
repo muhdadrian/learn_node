@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h3>Links</h3>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+    <h1>Web Server NodeJS</h1>
+    <h2>Hello, <%= name %></h2>
+
+    <h4>Students Registration</h4>
+
+    <% if (students.length < 1) { %>
+    <p>Students data is empty</p>
+    <!-- 1st we can add else below. Normally, SG will not do this -->
+    <% } else {%> <% students.forEach(student => { %>
+    <ul>
+      <li>Name : <%= student.name %></li>
+      <li>Email : <%= student.email %></li>
+    </ul>
+    <% }) %>
+    <!-- 2nd we close the else here -->
+    <% } %>
+    <!-- 3rd, uncommented the array in app.js. The data will be displayed once again in the browser -->
+    <!-- we learned control flow in ejs. Now, we learn another feature of layout system in 111  -->
+  </body>
+</html>

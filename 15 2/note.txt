@@ -1,0 +1,12 @@
+NodeJS Modules:
+
+1. Core Modules (modules in node js library. We can use it, by using its respective module such as file system, networking etc. We just need to call its module. Its export process is done by node, we just need to require it.)
+2. Local Modules (we build our own module like in previous lesson. We need export and require keywords)
+3. Third Party Modules (this is module made by other people. It's also called npm modules. All modules made by third party already gathered by node.js in a package manager called npm)
+
+require():
+the require function will look for module in steps:
+1. Core Modules
+2. File or directory (./ or / or ../) 
+3. Folder 'node_modules'
+

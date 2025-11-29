@@ -1,0 +1,26 @@
+<div class="comntainer mt-3">
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Add Data Contact Form</h2>
+			 <form method="post" action="/contact">
+				<!-- 1st copy the div (name) below twice for email and phoneno. If you want all to be filled with compulsory, just put required -->
+				<div class="mb-3">
+					<label for="name" class="form-label">Name</label>
+					<input type="text" class="form-control" id="name" name="name" required>
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" name="email" required>
+				</div>
+				<div class="mb-3">
+					<label for="phoneno" class="form-label">Phone No</label>
+					<input type="text" class="form-control" id="phoneno" name="phoneno" required>
+				</div>
+				<button type="submit" class="btn btn-primary">Add Contact Data</button>
+				<!-- 2nd, run the app and click the Add Contact Data button -->
+				 <!-- 3rd, if you give email without dot com, the data still can be sent by clicking the Add Contact Data button. But, if you remove the @, it will not work -->
+					<!-- 4th we need to process the sent data by creating a route. Go back to app.js -->
+			</form>
+		</div>
+	</div>
+ </div>

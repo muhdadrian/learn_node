@@ -1,0 +1,44 @@
+<div class="container mt-3" >
+	<div class="row">
+		<div class="col-md-8">
+			<h2>Contact Registration</h2>
+			<table class="table">
+				<thead>
+					<tr class="table-primary">
+						<th scope="col">#</th>
+						<th scope="col">Name</th>
+						<th scope="col">Phone No.</th>
+						<th scope="col">Action</th>
+					</tr>
+				</thead>
+				<!-- 1st, we add condition here for the empty contact.json file (ejsif) -->
+				 <!-- replace the condition with contacts. Cannot use !contacts as it means that there's no array, while we have array but it's empty or not -->
+					<!-- we check the length. If the array is empty it means 0. Copy the alert from detail.ejs -->
+				 <% if (contacts.length === 0) { %>
+					<tr>
+						<td colspan="4">
+							<div class="alert alert-danger fw-bold" role="alert">
+								The contact data is empty! 
+							</div>
+						</td>
+					</tr>
+				 <% } %>
+				 <!-- 2nd, run the app -->
+					<!-- 3rd, try to return back the data in contact.json and run it. Then, go to 134.  -->
+				<tbody>
+					 <% let no = 1; %>
+						<% contacts.forEach((contact, i) => { i++ %>
+							<tr>
+								<th scope="row"><%= i++ %></th> 
+								<td><%= contact.name %></td>
+								<td><%= contact.phoneno %></td>
+								<td>						
+									<a href="/contact/<%= contact.name  %>" class="btn btn-success badge rounded-pill"><i class="bi bi-info-circle"></i> detail</a>
+								</td>					
+							</tr>
+						<% }) %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container mt-3">
+	<div class="row">
+		<div class="col-md-8">
+			<h2>Detail Contact</h2>
+			<!-- 1st we make condition to handle the non-existant name in url (ejsif) -->
+			 <% if (!contact) { %>
+				<!-- 2nd look for alert in bootstrap -->
+				 <!-- fw (font weight) -->
+				<div class="alert alert-danger fw-bold" role="alert">
+					<!-- you can try fw-light -->
+					 <!-- 3rd, try to empty the contact.json in 133 -->
+					There's no contact data! <br> <a href="/contact" class="alert-link fw-normal">&laquo;Return to Contact Registration</a>. 
+				</div>
+			 <% } else { %>
+			<div class="card" style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title"><%= contact.name %></h5>
+					<h6 class="card-subtitle mb-2 text-body-secondary"><%= contact.phoneno %></h6>
+					<p class="card-text"><%= contact.email  %></p>
+					<a href="/contact" class="card-link">&laquo;Return to Contact Registration</a>
+				</div>
+			</div>
+			<% } %>
+		</div>
+	</div>
+</div>

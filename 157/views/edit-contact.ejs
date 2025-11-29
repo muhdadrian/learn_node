@@ -1,0 +1,38 @@
+<div class="comntainer mt-3">
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Edit Data Contact Form</h2>
+				<% if (typeof errors != 'undefined') { %>
+					 <div class="alert alert-danger" role="alert">
+						<ul>
+							<% errors.forEach(error => { %>
+								<li>
+									<%= error.msg  %>
+								</li>
+							<% }) %>
+						</ul>
+					 </div>
+				<% } %>
+
+			 <form method="post" action="/contact/update">
+				<!-- 1st, we can replace the ternary to OR operator (simpler) for value in input below. If there's oldName, we use oldName or if the oldName is false then we use name  -->
+				 <input type="hidden" name="oldName" value="<%= contact.oldName || contact.name %>">	
+				<!-- 2nd, try to replace Adrian Nandu with Hafizah Hamran and then click the Edit Contact Data button. It can't change. Click once again and it can't send the data. But, if you input new name like Siti Nur Hafizah Hamran. Then, it passed.  -->
+				 <!-- 3rd, go back to app.js -->
+				 <div class="mb-3">
+					<label for="name" class="form-label">Name</label>
+					<input type="text" class="form-control" id="name" name="name" required value="<%= contact.name %>">
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" name="email" required value="<%= contact.email %>">
+				</div>
+				<div class="mb-3">
+					<label for="phoneno" class="form-label">Phone No</label>
+					<input type="text" class="form-control" id="phoneno" name="phoneno" required value="<%= contact.phoneno %>">
+				</div>
+				<button type="submit" class="btn btn-primary">Edit Contact Data</button>
+			</form>
+		</div>
+	</div>
+ </div>

@@ -1,0 +1,40 @@
+<div class="container mt-3" >
+	<div class="row">
+		<div class="col-md-8">
+			<h2>Contact Registration</h2>
+			<table class="table">
+				<thead>
+					<tr class="table-primary">
+						<th scope="col">#</th>
+						<th scope="col">Name</th>
+						<th scope="col">Phone No.</th>
+						<th scope="col">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- 1st, we loop the <tr>. Type ejseach. Can press tab or enter -->
+					<!-- 2nd, replace array with contacts and element with contact -->
+					 <!-- 3rd, copy and paste the commented tr at the bottom to the looping. The go back to app.js -->
+						<% contacts.forEach(contact => { %>
+							<tr>
+								<th scope="row">1</th>
+								<td>Adrian</td>
+								<td>016-8345672</td>
+								<td>
+									<a href="" class="btn btn-success badge rounded-pill"><i class="bi bi-info-circle"></i> detail</a>
+								</td>
+							</tr>
+						<% }) %>
+					<!-- <tr>
+						<th scope="row">1</th>
+						<td>Adrian</td>
+						<td>016-8345672</td>
+						<td>
+							<a href="" class="btn btn-success badge rounded-pill"><i class="bi bi-info-circle"></i> detail</a>
+						</td>
+					</tr> -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

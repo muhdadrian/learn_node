@@ -1,0 +1,42 @@
+<div class="comntainer mt-3">
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Add Data Contact Form</h2>
+			<!-- 1st, we display the error message here (ejsif): -->
+			 <!-- we cannot replace the condition below with errors, as the errors must have a value. If it's empty, the errors.array() in app.js will be undefined. What we should do is to check whether the errors is undefined or not. -->
+				<!-- is the type errors is not undefined? If not undefined, it means there's an error -->
+				<% if (typeof errors != 'undefined') { %>
+					<!-- 2nd, put bootstrap alert -->
+					 <div class="alert alert-danger" role="alert">
+						<!-- 3rd, we loop in list as the alert message is an array of object -->
+						<ul>
+						<!-- 4th, we loop the li -->
+							<% errors.forEach(error => { %>
+								<li>
+									<%= error.msg  %>
+								</li>
+							<% }) %>
+						</ul>
+					 </div>
+				<% } %>
+				<!-- 5th, try to run the app. Adrian Nandu(name), asd@asd(email), asdasd(phoneno). The error message will displayed to the user in the browser. -->
+				 <!-- 6th we try another new/non-existant data: Sarah Sophia Adrian(name), sarahsophia.tokyouni(without dot com/edu), 012-9876754(phoneno). Only the email will not valid. If all data is successful, go to 146 -->
+
+			 <form method="post" action="/contact">
+				<div class="mb-3">
+					<label for="name" class="form-label">Name</label>
+					<input type="text" class="form-control" id="name" name="name" required>
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" name="email" required>
+				</div>
+				<div class="mb-3">
+					<label for="phoneno" class="form-label">Phone No</label>
+					<input type="text" class="form-control" id="phoneno" name="phoneno" required>
+				</div>
+				<button type="submit" class="btn btn-primary">Add Contact Data</button>
+			</form>
+		</div>
+	</div>
+ </div>
